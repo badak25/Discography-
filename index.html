@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>추간판 투시조영검사 안내</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    body { 
+        font-family: 'Noto Sans KR', sans-serif; 
+        background-color: #e2e8f0; 
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+        justify-content: center; 
+    }
+    .mobile-container { 
+        max-width: 480px; 
+        width: 100%; 
+        background-color: #f8fafc; 
+        min-height: 100vh; 
+        box-shadow: 0 0 20px rgba(0,0,0,0.15); 
+        overflow: hidden; 
+    }
+    .header { 
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
+        color: white; 
+        padding: 45px 20px 35px; 
+        text-align: center; 
+        border-bottom-left-radius: 35px; 
+        border-bottom-right-radius: 35px; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .header h1 { margin: 0; font-size: 25px; font-weight: 700; line-height: 1.4; letter-spacing: -0.5px; }
+    .header p { margin: 15px 0 0; font-size: 15px; opacity: 0.9; word-break: keep-all; line-height: 1.5; }
+    
+    .content { padding: 25px 20px; }
+    
+    .card { 
+        background: white; 
+        border-radius: 20px; 
+        padding: 30px 20px; 
+        margin-bottom: 25px; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.04); 
+        border: 1px solid #f1f5f9; 
+    }
+    .card.highlight { 
+        border: 2px solid #ef4444; 
+        background-color: #fef2f2; 
+        position: relative;
+    }
+    .card.highlight::before {
+        content: '필수 확인사항';
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ef4444;
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+    }
+    
+    .card h3 { margin: 0 0 18px; color: #0f172a; font-size: 20px; display: flex; align-items: center; font-weight: 700; letter-spacing: -0.5px; }
+    .card p { margin: 0 0 12px 0; color: #475569; font-size: 15px; line-height: 1.6; word-break: keep-all; }
+    .card p:last-child { margin-bottom: 0; }
+    .detail-list { padding-left: 0; margin: 12px 0; list-style: none; }
+    .detail-list li { position: relative; padding-left: 22px; margin-bottom: 8px; color: #475569; font-size: 14.5px; line-height: 1.6; }
+    .detail-list li::before { content: '✔'; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
+    .highlight .detail-list li::before { color: #ef4444; }
+    
+    .step-number { 
+        background-color: #0f172a; 
+        color: white; 
+        width: 28px; 
+        height: 28px; 
+        border-radius: 50%; 
+        display: inline-flex; 
+        justify-content: center; 
+        align-items: center; 
+        font-weight: bold; 
+        font-size: 15px; 
+        margin-right: 10px; 
+    }
+    
+    .svg-container {
+        width: 100%;
+        background-color: #0f172a;
+        border-radius: 16px;
+        margin: 20px 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        box-shadow: inset 0 4px 12px rgba(0,0,0,0.5), 0 4px 10px rgba(0,0,0,0.1);
+        border: 1px solid #1e293b;
+    }
+
+    .footer { 
+        text-align: center; 
+        padding: 30px 20px; 
+        background-color: #f1f5f9; 
+        color: #64748b; 
+        font-size: 14px; 
+        line-height: 1.6;
+        border-top: 1px solid #e2e8f0;
+    }
+    .footer strong { color: #0f172a; font-size: 16px; display: block; margin-top: 8px; }
+</style>
+</head>
+<body>
+    <div class="mobile-container">
+        <div class="header">
+            <h1>추간판 투시조영검사</h1>
+            <p>척추강 조영술에서 발견되지 않은 디스크의 내부 질환을 정밀하게 관찰하는 시술 방법입니다.</p>
+        </div>
+        
+        <div class="content">
+            <!-- 준비사항 (강조) -->
+            <div class="card highlight">
+                <h3 style="justify-content: center; text-align: center;"><i class="fa-solid fa-clipboard-check" style="margin-right: 8px; color: #ef4444;"></i> 검사 전 주의사항 및 접수</h3>
+                <ul class="detail-list">
+                    <li><strong>금식 안내:</strong> 검사 시작 6시간 전부터 아무것도 드시지 마십시오.</li>
+                    <li><strong>도착 및 접수:</strong> 본관 1층 척추주사진료실로 오셔서 직원에게 성함 및 등록번호를 말씀해 주시기 바랍니다.</li>
+                    <li><strong>특이사항:</strong> 임산부, 임신 가능성이 있는 분은 진료과 또는 검사실에 알려주세요.</li>
+                </ul>
+            </div>
+
+            <!-- 검사 과정 1 -->
+            <div class="card">
+                <h3><div class="step-number">1</div> 추간판 내 조영제 주입</h3>
+                
+                <!-- STEP 1 일러스트 (정밀 해부학 구조 및 의료용 주사기) -->
+                <div class="svg-container">
+                    <svg viewBox="0 0 300 200" width="100%" height="auto">
+                        <defs>
+                            <linearGradient id="boneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f8fafc"/>
+                                <stop offset="100%" stop-color="#94a3b8"/>
+                            </linearGradient>
+                            <radialGradient id="discGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#7dd3fc"/>
+                                <stop offset="70%" stop-color="#0284c7"/>
+                                <stop offset="100%" stop-color="#0c4a6e"/>
+                            </radialGradient>
+                            <!-- 주사기 실린더 질감 -->
+                            <linearGradient id="syringeGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                                <stop offset="50%" stop-color="#e2e8f0" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- 척수 신경 -->
+                        <path d="M 180 10 C 180 80 170 120 160 190" fill="none" stroke="#ca8a04" stroke-width="16" stroke-linecap="round"/>
+                        <path d="M 180 10 C 180 80 170 120 160 190" fill="none" stroke="#fef08a" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M 175 50 Q 200 60 210 80 M 168 150 Q 190 160 200 180" fill="none" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
+                        
+                        <!-- 척추체 (정밀 패스) -->
+                        <path d="M 60 30 C 120 25 130 35 135 60 C 140 85 120 95 60 95 C 45 95 40 80 40 60 C 40 40 45 30 60 30 Z" fill="url(#boneGrad)"/>
+                        <path d="M 195 45 C 220 45 240 50 245 70 C 250 90 220 85 190 85 C 185 85 185 65 195 45 Z" fill="url(#boneGrad)"/>
+                        <path d="M 65 130 C 125 125 135 135 140 160 C 145 185 125 195 65 195 C 50 195 45 180 45 160 C 45 140 50 130 65 130 Z" fill="url(#boneGrad)"/>
+                        <path d="M 185 145 C 210 145 230 150 235 170 C 240 190 210 185 180 185 C 175 185 175 165 185 145 Z" fill="url(#boneGrad)"/>
+
+                        <!-- 추간판(디스크) -->
+                        <path d="M 55 98 C 135 98 142 102 145 112 C 148 122 135 128 55 128 C 45 128 40 120 40 112 C 40 102 45 98 55 98 Z" fill="url(#discGrad)" stroke="#38bdf8" stroke-width="1"/>
+                        
+                        <!-- 천자침 및 의료용 주사기 세밀 묘사 -->
+                        <g transform="translate(0, -5)">
+                            <!-- 바늘 -->
+                            <path d="M 230 73 L 115 114" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+                            <!-- 주사기 본체 그룹 (회전) -->
+                            <g transform="rotate(20 230 73)">
+                                <!-- 주사기 바늘 허브(결합부) -->
+                                <rect x="230" y="69" width="12" height="8" rx="2" fill="#0ea5e9"/>
+                                <!-- 주사기 실린더(통) -->
+                                <rect x="242" y="65" width="45" height="16" rx="2" fill="url(#syringeGlass)" stroke="#94a3b8" stroke-width="1"/>
+                                <!-- 주사기 눈금 -->
+                                <line x1="250" y1="65" x2="250" y2="70" stroke="#475569" stroke-width="1"/>
+                                <line x1="260" y1="65" x2="260" y2="72" stroke="#475569" stroke-width="1.5"/>
+                                <line x1="270" y1="65" x2="270" y2="70" stroke="#475569" stroke-width="1"/>
+                                <!-- 플런저 (밀대) -->
+                                <rect x="287" y="68" width="20" height="10" rx="1" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1">
+                                    <animate attributeName="width" values="20; 5; 20" dur="2s" repeatCount="indefinite"/>
+                                    <animate attributeName="x" values="287; 272; 287" dur="2s" repeatCount="indefinite"/>
+                                </rect>
+                                <!-- 플런저 손잡이 -->
+                                <rect x="307" y="62" width="4" height="22" rx="2" fill="#cbd5e1">
+                                    <animate attributeName="x" values="307; 292; 307" dur="2s" repeatCount="indefinite"/>
+                                </rect>
+                                <!-- 주사기 내부 조영제 (파란색) -->
+                                <rect x="244" y="67" width="40" height="12" fill="#38bdf8" opacity="0.8">
+                                    <animate attributeName="width" values="40; 5; 40" dur="2s" repeatCount="indefinite"/>
+                                </rect>
+                            </g>
+                        </g>
+
+                        <!-- 조영제 주입 확산 애니메이션 -->
+                        <circle cx="110" cy="113" r="18" fill="#38bdf8" opacity="0.6">
+                            <animate attributeName="r" values="2; 20; 2" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8; 0; 0.8" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+
+                        <text x="70" y="65" font-size="11" fill="#0f172a" font-weight="bold" opacity="0.7">척추체</text>
+                        <text x="65" y="117" font-size="11" fill="#ffffff" font-weight="bold">디스크</text>
+                    </svg>
+                </div>
+                
+                <p>본 검사는 디스크 중심에 천자침을 삽입 후 조영제를 안전하게 주입하는 과정입니다.</p>
+                <ul class="detail-list">
+                    <li>검사 후 조영제가 추간판 안에 많이 들어가므로 뻐근한 느낌이 있을 수 있습니다.</li>
+                    <li>2~3시간 후 흡수 배설되면서 통증이 자연스럽게 가라앉습니다.</li>
+                </ul>
+            </div>
+
+            <!-- 검사 과정 2 (CT 이동 및 촬영) -->
+            <div class="card">
+                <h3><div class="step-number">2</div> 갠트리 진입 및 CT 정밀 촬영</h3>
+                
+                <!-- STEP 2 일러스트 (실제 사람 실루엣과 CT 진입 애니메이션) -->
+                <div class="svg-container">
+                    <svg viewBox="0 0 300 200" width="100%" height="auto">
+                        <defs>
+                            <mask id="boreMask">
+                                <rect width="300" height="200" fill="white"/>
+                                <ellipse cx="210" cy="100" rx="50" ry="70" fill="black"/>
+                            </mask>
+                            <linearGradient id="machineBody" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f8fafc"/>
+                                <stop offset="100%" stop-color="#94a3b8"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- 배경 (어두운 검사실) -->
+                        <rect width="300" height="200" fill="#020617"/>
+                        
+                        <!-- CT 통 내부 (어두운 뒷벽) -->
+                        <rect x="160" y="30" width="100" height="140" rx="50" fill="#000000"/>
+                        
+                        <!-- 환자 및 이동 침대 (애니메이션 그룹: 가로 Z축 진입) -->
+                        <g>
+                            <!-- 침대가 갠트리 안으로 부드럽게 들어갔다 나오는 애니메이션 -->
+                            <animateTransform attributeName="transform" type="translate" values="-100 0; 50 0; -100 0" dur="7s" repeatCount="indefinite" keyTimes="0; 0.5; 1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"/>
+                            
+                            <!-- 침대 매트리스 -->
+                            <path d="M 0 130 L 220 130 C 225 130 230 135 230 140 L 230 145 L 0 145 Z" fill="#334155"/>
+                            <rect x="0" y="122" width="220" height="8" rx="2" fill="#94a3b8"/>
+                            
+                            <!-- 실제 사람 형태의 실루엣 (누워있는 모습) -->
+                            <!-- 머리 -->
+                            <ellipse cx="200" cy="112" rx="9" ry="11" fill="#fde047"/>
+                            <!-- 코/턱선 프로필 -->
+                            <polygon points="207,108 212,112 207,114" fill="#fde047"/>
+                            <!-- 목 -->
+                            <rect x="185" y="112" width="10" height="8" fill="#fde047"/>
+                            <!-- 상체 및 가운 -->
+                            <path d="M 120 122 C 130 102, 170 100, 188 116 L 188 122 Z" fill="#60a5fa"/>
+                            <!-- 가슴 위에 올린 팔 -->
+                            <path d="M 175 110 C 160 115, 140 115, 145 120 C 155 122, 170 118, 180 112 Z" fill="#93c5fd"/>
+                            <!-- 하체 -->
+                            <path d="M 40 122 L 40 112 C 60 108, 110 108, 120 112 L 120 122 Z" fill="#3b82f6"/>
+                            <!-- 발끝 -->
+                            <path d="M 25 122 L 25 112 C 35 110, 40 122, 40 122 Z" fill="#fde047"/>
+                            
+                            <!-- 조영제가 주입된 허리 부위 스캐닝 포인트 -->
+                            <g transform="translate(130, 112)">
+                                <circle cx="0" cy="0" r="4" fill="#38bdf8">
+                                    <animate attributeName="opacity" values="0.2; 1; 0.2" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle cx="0" cy="0" r="15" fill="none" stroke="#7dd3fc" stroke-width="1.5">
+                                    <animate attributeName="r" values="4; 25" dur="1s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="1; 0" dur="1s" repeatCount="indefinite"/>
+                                </circle>
+                            </g>
+                        </g>
+
+                        <!-- CT 갠트리 전면 기기 몸체 (환자가 구멍 뒤로 들어가는 마스크 처리) -->
+                        <path d="M 100 20 C 100 20, 280 10, 310 10 L 310 190 L 100 190 C 80 190, 80 20, 100 20 Z" fill="url(#machineBody)" mask="url(#boreMask)"/>
+                        
+                        <!-- 갠트리 둥근 입구 테두리 디테일 -->
+                        <ellipse cx="210" cy="100" rx="50" ry="70" fill="none" stroke="#cbd5e1" stroke-width="6"/>
+                        <ellipse cx="210" cy="100" rx="47" ry="67" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
+
+                        <!-- 내부 스캐닝 레이저 빛 (위아래로 스캔) -->
+                        <rect x="207" y="30" width="6" height="140" fill="#ef4444" opacity="0.5">
+                            <animate attributeName="opacity" values="0; 0.7; 0" dur="0.8s" repeatCount="indefinite"/>
+                        </rect>
+                        
+                        <!-- 상태 표시기 -->
+                        <g transform="translate(20, 20)">
+                            <rect x="0" y="0" width="95" height="24" rx="4" fill="#000000" opacity="0.8"/>
+                            <circle cx="12" cy="12" r="4" fill="#ef4444">
+                                <animate attributeName="opacity" values="0.2; 1; 0.2" dur="0.8s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="24" y="16" font-size="11" fill="#38bdf8" font-weight="bold">SCAN IN PROGRESS</text>
+                        </g>
+                    </svg>
+                </div>
+                
+                <p>조영제 주입이 완료되면 내부의 미세한 구조물들을 더욱 선명하게 확인하기 위해 CT(컴퓨터단층촬영) 검사실로 이동하여 촬영을 진행하게 됩니다.</p>
+                <ul class="detail-list">
+                    <li>추간판의 퇴행성 변화, 추간판의 탈출 상태 확인, 수핵 파열 유무 등을 관찰합니다.</li>
+                </ul>
+            </div>
+
+            <!-- 검사 후 주의사항 (강조) -->
+            <div class="card highlight">
+                <h3 style="justify-content: center; text-align: center;"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px; color: #ef4444;"></i> 시술 후 주의사항 (매우 중요)</h3>
+                <ul class="detail-list">
+                    <li><strong>운전 금지:</strong> 시술 당일 팔이나 다리에 힘이 빠질 수 있으므로 자가 운전은 절대 삼가셔야 합니다.</li>
+                    <li><strong>샤워 및 목욕:</strong> 반창고는 하루가 지나면 제거하셔도 됩니다. 가벼운 샤워는 <strong>2일 후</strong>, 통목욕은 <strong>7일 이후</strong>부터 가능합니다.</li>
+                    <li><strong>결과 상담:</strong> 모든 검사가 끝난 후의 결과 및 향후 치료 계획은 진료를 받으신 해당 과 담당 의사 선생님과 상의하십시오.</li>
+                </ul>
+                <p style="margin-top: 15px; font-size: 13.5px; text-align: center; color: #ef4444; font-weight: 500;">※ 응급환자 발생시 예약시간보다 다소 지연될 수 있습니다.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            안전하고 정확한 진단을 위해 최선을 다하겠습니다.<br>
+            <strong>예약 변경 및 문의: 통합 안내 (☎ 1599-3114)</strong>
+        </div>
+    </div>
+</body>
+</html>
